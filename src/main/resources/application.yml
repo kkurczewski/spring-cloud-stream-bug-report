@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    function.definition: alerts
+    stream:
+      bindings:
+#        alerts-in-0:
+#          destination: example.alerts
+        notifications:
+          destination: example.notifications
+      output-bindings: notifications
+      function:
+        autodetect: false
